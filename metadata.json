@@ -1,0 +1,6 @@
+{
+  "name": "MEDICORE // 8.5 · BD Medical Admission System",
+  "description": "Minimalist precision focus chronometer and 8.5-hour daily study telemetry for Bangladesh Government Medical College aspirants across HSC Batches 27, 28, and 29.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

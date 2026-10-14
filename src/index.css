@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #07080b;
+    color: #e4e4e7;
+    overflow-x: hidden;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom minimal luxury scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0d;
+}
+::-webkit-scrollbar-thumb {
+  background: #222530;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333845;
+}
+
+/* Precision Hairline Background Grid */
+.bg-grid-hairline {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Tactile push button physics */
+.btn-tactile {
+  transition: all 0.07s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.btn-tactile:hover {
+  filter: brightness(1.08);
+}
+.btn-tactile:active {
+  transform: translateY(1.5px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* High-end chassis bevel */
+.chassis-box {
+  background-color: #0d0f14;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+    0 20px 40px -15px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(0, 0, 0, 0.6);
+}
+
+/* Precision LED glowing segment */
+.led-active {
+  background-color: #05df72;
+  box-shadow: 0 0 10px rgba(5, 223, 114, 0.45), inset 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.led-pulsing {
+  background-color: #05df72;
+  box-shadow: 0 0 14px rgba(5, 223, 114, 0.8);
+  animation: ledPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes ledPulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.35; }
+}
